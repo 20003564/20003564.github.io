@@ -626,6 +626,7 @@ a.icon {
 
 #single-project video {
   margin-top: 14px;
+  box-shadow: 0 0 5px #666;
 }
 
 /* about section styles

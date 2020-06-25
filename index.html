@@ -85,7 +85,7 @@ http://www.tooplate.com/view/2082-pure-mix
 
 <!-- UI for Emergencies
 ================================================== -->
-<div class="overlay" id="work11">
+<div class="overlay wow" id="work11">
   <section id="single-project">
     <div class="container">
 
@@ -847,26 +847,34 @@ http://www.tooplate.com/view/2082-pure-mix
 /*<!-- overlay
 ================================================== -->*/
 function overlayOn(workNum, videoNum) {
-  var videoName = "work"+workNum+"_vid";
 
-  document.getElementById("html").style.overflow = "hidden";
-  document.getElementById("work"+workNum).style.display = "block";
+  document.getElementById("work"+workNum).classList.remove("fadeOut");
+  document.getElementById("work"+workNum).classList.add("fadeIn");
+  setTimeout(function(){
+    document.getElementById("work"+workNum).style.display = "block";
+    document.getElementById("html").style.overflow = "hidden";
+  }, 500);
 
   for (var i = 0; i < videoNum; i++){
-    document.getElementById(videoName + i).muted = true;
-    document.getElementById(videoName + i).currentTime = 0;
-    document.getElementById(videoName + i).play(); 
+    var videoName = document.getElementById("work"+workNum+"_vid" + i);
+    videoName.muted = true;
+    videoName.currentTime = 0;
+    videoName.play(); 
   }
 }
 
 function overlayOff(workNum, videoNum) {
-  var videoName = "work"+workNum+"_vid";
 
-  document.getElementById("work"+workNum).style.display = "none";
-  document.getElementById("html").style.removeProperty("overflow"); 
-
+  document.getElementById("work"+workNum).classList.remove("fadeIn");
+  document.getElementById("work"+workNum).classList.add("fadeOut");
+  setTimeout(function(){
+    document.getElementById("work"+workNum).style.display = "none";
+    document.getElementById("html").style.removeProperty("overflow"); 
+  }, 500);
+  
   for (var i = 0; i < videoNum; i++){
-    document.getElementById(videoName + i).pause();
+    var videoName = document.getElementById("work"+workNum+"_vid" + i);
+    videoName.pause();
   }
 }
 </script>

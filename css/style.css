@@ -58,7 +58,6 @@ h5 {
 }
 
 p {
-  -webkit-text-stroke-width: 0.25px;
   color: #777;
   font-size: 16px;
   line-height: 28px;
@@ -185,16 +184,61 @@ nav a {
   text-decoration: none;
 }
 
-.navicon {  
-  position: relative;
+.self img {
+  float: left;
+  width: 65px;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+.intro {
+  float: left;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-weight: normal
+}
+.intro .name{
+  text-decoration: none;
+  color: #FFF;
+  font-weight: normal;
+  font-size: 24px;
+}
+.intro .status{
+  text-decoration: none;
+  color: #FFF;
+  font-size: 13px;
+}
+
+.centre-home{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.centre-home a {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 0;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.navicon { 
   right: 0;
+  position: flex;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0 0 0;
+  padding: 20px 0 0;
 }
 
 nav ul {
@@ -209,7 +253,7 @@ nav ul.right {
 #nav-menu a {
   font-weight: 300;
   font-size: 26px;
-  color: #ffffff;
+  color: #666;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
@@ -283,8 +327,8 @@ a.icon {
 }
 
 .circle {
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
   text-align: center;
   margin: 0 auto;
   position: absolute;
@@ -298,12 +342,12 @@ a.icon {
   -moz-transition: all 0.3s ease;
   cursor: pointer;
   z-index: 99;
-  padding: 8px 0 0;
+  padding: 4px 0 0;
 }
 
 .circle i {
   font-size: 36px;
-  color: #111112;
+  color: #FFF;
 }
 
 .circle.dark {
@@ -372,7 +416,7 @@ a.icon {
   top: 0;
   left: 0;
   z-index: 9999999;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 1);
   transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -391,7 +435,7 @@ a.icon {
   position: absolute;
   top: 32px;
   right: 32px;
-  color: #fff;
+  color: #666;
   cursor: pointer;
 }
 
@@ -587,16 +631,16 @@ a.icon {
 }
 
 .overlay{
-  background-color: rgba(255,255,255,1);
   position: fixed;
   overflow-y: scroll;
-  display: none;
   width: 100%;
   height: 100%;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background: rgba(255,255,255,1);
   z-index: 2;
 }
 
@@ -811,11 +855,10 @@ a.icon {
 /* footer section styles
 /* ========================================== */
 footer {
-  background: #5495ae;
+  background: #5fa9c0;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  margin-top: 15px;
 }
 
 

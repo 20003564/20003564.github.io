@@ -54,17 +54,18 @@ http://www.tooplate.com/view/2082-pure-mix
          <div class="container">
             <div class="row">
 
-              <div class="brand">
-                <a href="." style="font-weight: normal;">LO | portfolio </a>
-              </div>
-
-              <div class="navicon">
-                <div class="menu-container">
-                  <div class="circle dark inline">
-                    <img src="src/seer.png" style="border-radius: 50%; background-color: white;">
+              <div class="self">
+                <a href="./about.html" title="About Me">
+                  <img src="src/profilePic/sijijai.png">
+                  <div class="intro">
+                    <div class="name">Howard Lo</div>
+                    <div class="status">#廢青 #失業中</div>
                   </div>
-                  
-                </div>
+                </a>               
+                
+              </div>
+              <div class="centre-home">
+                <a href="./index.html">LO | Portfolio</a>
               </div>
 
             </div>
@@ -85,7 +86,7 @@ http://www.tooplate.com/view/2082-pure-mix
 
 <!-- UI for Emergencies
 ================================================== -->
-<div class="overlay wow" id="work11">
+<div class="overlay" id="work11">
   <section id="single-project">
     <div class="container">
 
@@ -821,7 +822,7 @@ http://www.tooplate.com/view/2082-pure-mix
 
 			<div class="col-md-12 col-sm-12">
 				<p class="wo" style="color: #F8F8F8; text-align: center;
-  text-justify: auto;">Copyright © 2020 Howard W. H. LO <br> Modified from Tooplate template</p>
+  text-justify: auto;"><br>Modified from Tooplate template<br>Copyright © 2020 Howard LO</p>
 				<ul class="social-icon wo"> 
           <li><a href="https://github.com/20003564" target="_blank" class="fa fa-github"></a></li>
           <li><a class="fa fa-linkedin"></a></li> 
@@ -833,7 +834,6 @@ http://www.tooplate.com/view/2082-pure-mix
 		</div>
 	</div>
 </footer>
-
 
 <!-- Javascript 
 ================================================== -->
@@ -848,12 +848,8 @@ http://www.tooplate.com/view/2082-pure-mix
 ================================================== -->*/
 function overlayOn(workNum, videoNum) {
 
-  document.getElementById("work"+workNum).classList.remove("fadeOut");
-  document.getElementById("work"+workNum).classList.add("fadeIn");
-  setTimeout(function(){
-    document.getElementById("work"+workNum).style.display = "block";
-    document.getElementById("html").style.overflow = "hidden";
-  }, 500);
+  document.getElementById("work"+workNum).style.display = "block";
+  document.getElementById("html").style.overflow = "hidden";
 
   for (var i = 0; i < videoNum; i++){
     var videoName = document.getElementById("work"+workNum+"_vid" + i);
@@ -865,12 +861,8 @@ function overlayOn(workNum, videoNum) {
 
 function overlayOff(workNum, videoNum) {
 
-  document.getElementById("work"+workNum).classList.remove("fadeIn");
-  document.getElementById("work"+workNum).classList.add("fadeOut");
-  setTimeout(function(){
     document.getElementById("work"+workNum).style.display = "none";
     document.getElementById("html").style.removeProperty("overflow"); 
-  }, 500);
   
   for (var i = 0; i < videoNum; i++){
     var videoName = document.getElementById("work"+workNum+"_vid" + i);

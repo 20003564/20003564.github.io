@@ -961,16 +961,12 @@ footer {
   }
 
   .centre-home {
-    text-align: right;
-    float: right;
     top: 50%;
     right: 0;
-    transform: translate(0%, -50%);
+    transform: translate(10%, -50%);
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
   }
 
   .centre-home a {
